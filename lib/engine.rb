@@ -32,5 +32,12 @@ class Engine
       @parking_lot.capacity
     end
 
+    def registration_numbers_for_cars_with_colour(color)
+      cars = @parking_lot.slots.select{|key, value| value.color == "#{color}" }
+      cars.each do |k,v|
+       print v.number_plate, ","
+      end
+    end
+
   end
 end
