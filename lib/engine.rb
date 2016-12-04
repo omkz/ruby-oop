@@ -28,6 +28,9 @@ class Engine
       end
     end
 
+    def get_capacity
+      @parking_lot.capacity
+    end
+
   end
 end
-
