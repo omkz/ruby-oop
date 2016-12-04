@@ -44,7 +44,12 @@ class Engine
 
     def slot_number_for_registration_number(number_plate)
       cars = @parking_lot.slots.select{|key, value| value.number_plate == "#{number_plate}" }
-      puts cars.keys
+
+      if cars.length > 0
+        puts cars.keys
+      else
+        puts "Not found"
+      end
     end
 
     end
