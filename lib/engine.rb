@@ -20,5 +20,14 @@ class Engine
       available[0]
     end
 
+    def status
+      @parking_lot.slots.each do |key, value|
+        print key, " | "
+        print value.number_plate, " | "
+        print value.color, " \t | \n"
+      end
+    end
+
   end
 end
+
