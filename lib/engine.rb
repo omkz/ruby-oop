@@ -1,4 +1,5 @@
-require 'parking_lot'
+require '../lib/parking_lot'
+require '../lib/driver'
 
 class Engine
 
@@ -8,6 +9,16 @@ class Engine
       @parking_lot = ParkingLot.new(capacity)
     end
 
+    def get_slots()
+      @parking_lot.slots
+    end
+
+    def get_available_slot_number
+      a = Array(1..@parking_lot.capacity)
+      available_slot = @parking_lot.slots.keys
+      available = a - available_slot
+      available[0]
+    end
+
   end
 end
-
