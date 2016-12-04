@@ -44,9 +44,10 @@ class Engine
 
     def slot_number_for_registration_number(number_plate)
       cars = @parking_lot.slots.select{|key, value| value.number_plate == "#{number_plate}" }
+      slot_numbers = cars.map{|k,v| "#{k}"}.join(',')
 
       if cars.length > 0
-        puts cars.keys
+        slot_numbers
       else
         puts "Not found"
       end
