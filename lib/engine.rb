@@ -42,5 +42,10 @@ class Engine
       puts cars.map{|k,v| "#{k}"}.join(',')
     end
 
+    def slot_number_for_registration_number(number_plate)
+      cars = @parking_lot.slots.select{|key, value| value.number_plate == "#{number_plate}" }
+      puts cars.keys
+    end
+
     end
 end
