@@ -39,7 +39,7 @@ class Engine
 
     def slot_numbers_for_cars_with_colour(color)
       cars = @parking_lot.slots.select{|key, value| value.color == "#{color}" }
-      puts cars.map{|k,v| "#{k}"}.join(',')
+      cars.map{|k,v| "#{k}"}.join(',')
     end
 
     def slot_number_for_registration_number(number_plate)
