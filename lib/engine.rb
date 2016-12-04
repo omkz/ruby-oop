@@ -34,9 +34,7 @@ class Engine
 
     def registration_numbers_for_cars_with_colour(color)
       cars = @parking_lot.slots.select{|key, value| value.color == "#{color}" }
-      cars.each do |k,v|
-       print v.number_plate, ","
-      end
+      puts cars.map{|k,v| "#{v.number_plate}"}.join(',')
     end
 
   end
