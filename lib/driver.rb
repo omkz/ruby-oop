@@ -10,6 +10,11 @@ class Driver
       slots[slot_number] = Car.new(number_plate,color)
       slot_number+= 1
     end
+
+    def leave(slot_number)
+      slots = Engine.get_slots
+      slots.delete(slot_number)
+    end
   end
 
 end
