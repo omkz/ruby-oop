@@ -40,8 +40,11 @@ end
 
 
 def handle_input(input)
-  result = eval(input)
-  puts(" => #{result}")
+  puts "\n"
+  puts "Output: \n"
+  eval(input)
+  puts "\n"
+
 end
 
 repl = -> prompt do
@@ -51,7 +54,7 @@ end
 
 if ARGV.empty?
   loop do
-    repl[">> "]
+    repl["Input: \n"]
   end
 
 else
