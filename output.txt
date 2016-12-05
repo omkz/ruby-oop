@@ -1,0 +1,52 @@
+Created a parking lot with 6 slots
+
+ 
+allocated slot number 1
+
+ 
+allocated slot number 2
+
+ 
+allocated slot number 3
+
+ 
+allocated slot number 4
+
+ 
+allocated slot number 5
+
+ 
+allocated slot number 6
+
+ 
+Slot number 4 is free 
+
+ 
+1 | KA­01­HH­1234 | White 	 | 
+2 | KA­01­HH­9999 | White 	 | 
+3 | KA­01­BB­0001 | Black 	 | 
+5 | KA­01­HH­2701  | Blue 	 | 
+6 | KA­01­HH­3141 | Black 	 | 
+
+ 
+allocated slot number 4
+
+ 
+Sorry, parking lot is full
+
+ 
+KA­01­HH­1234,KA­01­HH­9999,KA­01­P­333
+
+ 
+1,2,4
+
+ 
+6
+
+ 
+Not found
+
+
+ 
+
+ 

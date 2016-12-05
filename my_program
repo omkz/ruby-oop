@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+require_relative 'lib/engine'
+
+input = ARGV[0]
+
+def create_parking_lot(slot_number)
+  Engine.create_parking_lot(slot_number)
+  puts "Created a parking lot with #{slot_number} slots"
+end
+
+def park(number_plate, color)
+  Driver.park(number_plate, color)
+end
+
+def status
+  Engine.status
+end
+
+def leave(slot_number)
+  Driver.leave(slot_number)
+  puts "Slot number #{slot_number} is free "
+end
+
+def registration_numbers_for_cars_with_colour(color)
+  puts Engine.registration_numbers_for_cars_with_colour(color)
+end
+
+def slot_numbers_for_cars_with_colour(color)
+  puts Engine.slot_numbers_for_cars_with_colour(color)
+end
+def slot_number_for_registration_number(number_plate)
+  puts Engine.slot_number_for_registration_number(number_plate)
+end
+
+
+def handle_input(input)
+  result = eval(input)
+  puts(" => #{result}")
+end
+
+repl = -> prompt do
+  print prompt
+  handle_input(gets.chomp!)
+end
+
+if ARGV.empty?
+  loop do
+    repl[">> "]
+  end
+
+else
+  IO.foreach(input) do |block|
+    eval(block)
+    puts "\n "
+  end
+end
+
+
+
+
+
