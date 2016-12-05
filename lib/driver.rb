@@ -12,7 +12,6 @@ class Driver
       if slots.length >= capacity
         puts "Sorry, parking lot is full"
       else
-        puts "allocated slot number #{slot_number}"
         slots[slot_number] = Car.new(number_plate,color)
         slot_number+= 1
       end
