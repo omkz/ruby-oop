@@ -1,5 +1,5 @@
-require '../lib/parking_lot'
-require '../lib/driver'
+require_relative 'parking_lot'
+require_relative 'driver'
 
 class Engine
 

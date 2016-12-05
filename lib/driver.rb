@@ -1,4 +1,4 @@
-require '../lib/car'
+require_relative 'car'
 
 class Driver
 
