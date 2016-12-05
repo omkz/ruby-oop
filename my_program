@@ -57,7 +57,7 @@ if ARGV.empty?
 else
   IO.foreach(input) do |block|
     eval(block)
-    # puts "\n "
+      puts "\n "
   end
 end
 
